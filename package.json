@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-nmd-crawler",
+  "version": "1.0.0",
+  "description": "NMD Node.js Web Crawler",
+  "main": "index.js",
+  "repository": "https://github.com/gdmgent-1920-mobdev2/nodejs-nmd-crawler.git",
+  "author": "drdynscript <drdynscript@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "lint": "tslint --project tsconfig.json",
+    "start": "node dist/index.js"
+  }
+}

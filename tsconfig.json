@@ -1,0 +1,23 @@
+
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "commonjs",
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "outDir": "dist",
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2020",
+        "typeRoots": [
+            "./src/typings",
+            "./node_modules/@types"
+        ]
+    },
+    "compileOnSave": true,
+    "include": [
+    "src"
+    ]
+}
