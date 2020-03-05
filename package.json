@@ -24,5 +24,8 @@
     "lint": "tslint --project tsconfig.json",
     "serve": "node dist/index.js",
     "watch:serve": "ts-node-dev --watch --poll --respawn --transpileOnly ./src/index.ts"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
