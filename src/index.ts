@@ -1,13 +1,25 @@
 import { default as express, Express } from 'express';
+import { default as bodyParser } from 'body-parser';
+import { default as cors } from 'cors';
 
 import * as helloController from './controllers/hello.controller';
 import * as proxyController from './controllers/proxy.controller';
+
 
 // Constants
 const PORT: Number = Number(process.env.PORT) || 8080;
 
 // Create Express server
 const app: Express = express();
+
+// Settings
+app.use(cors({
+    origin: true
+}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true,
+}));
 
 // Routes
 app.get('/api/hello', helloController.getHello);
