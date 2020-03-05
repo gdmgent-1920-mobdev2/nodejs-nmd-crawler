@@ -22,6 +22,7 @@
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "lint": "tslint --project tsconfig.json",
+    "start": "node dist/index.js",
     "serve": "node dist/index.js",
     "watch:serve": "ts-node-dev --watch --poll --respawn --transpileOnly ./src/index.ts"
   },
