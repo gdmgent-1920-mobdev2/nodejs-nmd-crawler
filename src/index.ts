@@ -18,6 +18,13 @@ app.get('/nmd', (req: express.Request, res: express.Response) => {
     });
 });
 app.get('/proxy/content', proxyController.getContent);
+app.get('/proxy/seo', proxyController.getSEO);
+app.get('*', (req: express.Request, res: express.Response) => {
+    res.status(404).json({
+        message: 'The resources doesn\'t exists',
+        createdAt: Date.now()
+    });
+});
 
 // Run the Server on a specified port
 app.listen(PORT, () => console.log(`Server running and listining on, port ${PORT}`));
