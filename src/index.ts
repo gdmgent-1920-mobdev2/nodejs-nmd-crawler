@@ -1,5 +1,7 @@
 import { default as express, Express } from 'express';
 
+import * as helloController from './controllers/hello.controller';
+
 // Constants
 const PORT: Number = Number(process.env.PORT) || 8080;
 
@@ -7,6 +9,7 @@ const PORT: Number = Number(process.env.PORT) || 8080;
 const app: Express = express();
 
 // Routes
+app.get('/api/hello', helloController.getHello)
 app.get('/nmd', (req: express.Request, res: express.Response) => {
     res.status(200).json({
         message: "Greathings Earthling we are NMD, you will be assimilated!",
