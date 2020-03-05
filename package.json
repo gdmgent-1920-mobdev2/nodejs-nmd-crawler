@@ -14,11 +14,13 @@
   "devDependencies": {
     "@types/express": "^4.17.3",
     "@types/request-promise-native": "^1.0.17",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "lint": "tslint --project tsconfig.json",
-    "start": "node dist/index.js"
+    "serve": "node dist/index.js",
+    "watch:serve": "ts-node-dev --watch --poll --respawn --transpileOnly ./src/index.ts"
   }
 }

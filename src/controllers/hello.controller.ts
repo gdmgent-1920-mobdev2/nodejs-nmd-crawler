@@ -5,7 +5,7 @@ import { default as express } from 'express';
  */
 export const getHello = async (req: express.Request, res: express.Response) => {
     res.status(200).json({
-        message: "Hello World!",
+        message: "Hello Worlds!",
         createdAt: Date.now()
     });
 };
